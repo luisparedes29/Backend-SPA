@@ -1,5 +1,6 @@
 const express = require('express')
 const router = express.Router()
+const verifyToken = require('./validacion-token')
 const {
   getServicios,
   crearServicio,
@@ -10,8 +11,8 @@ const {
 /* rutas de servicios. */
 router
   .get('/', getServicios)
-  .post('/nuevo', crearServicio)
-  .put('/editar/:id', editarServicio)
-  .delete('/eliminar/:id', eliminarServicio)
+  .post('/nuevo', verifyToken, crearServicio)
+  .put('/editar/:id', verifyToken, editarServicio)
+  .delete('/eliminar/:id', verifyToken, eliminarServicio)
 
 module.exports = router

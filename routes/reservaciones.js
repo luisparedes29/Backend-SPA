@@ -1,5 +1,7 @@
 const express = require('express')
 const router = express.Router()
+const verifyToken = require('./validacion-token')
+
 const {
   getReservaciones,
   crearReservacion,
@@ -10,8 +12,8 @@ const {
 /* rutas de promociones. */
 router
   .get('/', getReservaciones)
-  .post('/nuevo', crearReservacion)
-  .put('/editar/:id', editarReservacion)
-  .delete('/eliminar/:id', eliminarReservacion)
+  .post('/nuevo', verifyToken, crearReservacion)
+  .put('/editar/:id', verifyToken, editarReservacion)
+  .delete('/eliminar/:id', verifyToken, eliminarReservacion)
 
 module.exports = router
