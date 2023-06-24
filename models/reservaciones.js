@@ -5,6 +5,9 @@ const ReservacionesSchema = new mongoose.Schema(
     nombre: {
       type: String,
     },
+    correo: {
+      type: String,
+    },
     cedula: {
       type: String,
     },
