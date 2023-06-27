@@ -33,7 +33,11 @@ const crearServicio = async (req, res) => {
 //funcion para editar un servicio
 const editarServicio = async (req, res) => {
   try {
-    const servicio = await Servicios.findByIdAndUpdate(req.params.id, req.body)
+    const servicio = await Servicios.findByIdAndUpdate(
+      req.params.id,
+      req.body,
+      { new: true }
+    )
     res.status(200).json({ servicio })
     return
   } catch (error) {
