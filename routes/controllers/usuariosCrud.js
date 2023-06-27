@@ -20,7 +20,7 @@ const crearUsuario = async (req, res) => {
       nombre,
       password,
     })
-    res.status(200).json(usuarioCreado)
+    res.status(200).json({ usuario: usuarioCreado })
     return
   } catch (error) {
     res.status(400).json({ error })
@@ -73,7 +73,7 @@ const editarUsuario = async (req, res) => {
       return
     }
 
-    res.status(200).json(usuarioActualizado)
+    res.status(200).json({ usuario: usuarioActualizado })
     return
   } catch (error) {
     res.status(400).json({ error })
@@ -89,7 +89,7 @@ const eliminarUsuario = async (req, res) => {
       res.status(400).json({ error: 'El usuario no existe' })
       return
     }
-    res.status(200).json(usuarioEliminado)
+    res.status(200).json({ usuario: usuarioEliminado })
     return
   } catch (error) {
     res.status(500).json({ error })
