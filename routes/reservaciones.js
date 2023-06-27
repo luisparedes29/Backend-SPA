@@ -12,7 +12,7 @@ const {
 /* rutas de promociones. */
 router
   .get('/', getReservaciones)
-  .post('/nuevo', verifyToken, crearReservacion)
+  .post('/nuevo', crearReservacion)
   .put('/editar/:id', verifyToken, editarReservacion)
   .delete('/eliminar/:id', verifyToken, eliminarReservacion)
 

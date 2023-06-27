@@ -11,7 +11,7 @@ const {
 
 router
   .get('/', getTestimonios)
-  .post('/nuevo', verifyToken, crearTestimonio)
+  .post('/nuevo', crearTestimonio)
   .put('/editar/:id', verifyToken, editarTestimonio)
   .delete('/eliminar/:id', verifyToken, eliminarTestimonio)
 
