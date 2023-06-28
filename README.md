@@ -78,7 +78,3 @@ Si deseas contribuir a este proyecto, puedes seguir los siguientes pasos:
 7. Abre una solicitud de extracción en este repositorio original.
 
 ¡Gracias por tu contribución!
-
-## Licencia
-
-Este proyecto está bajo la Licencia MIT. Puedes consultar el archivo [LICENSE](LICENSE) para obtener más información.
