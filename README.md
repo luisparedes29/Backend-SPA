@@ -2,6 +2,10 @@
 
 Este repositorio contiene el código fuente del backend de un SPA (Single Page Application) desarrollado con tecnologías como Node.js, Express, Cors, Nodemailer, MongoDB, JWT, Bcrypt y Mailgen. El objetivo de este proyecto es proporcionar un backend robusto y seguro para la aplicación.
 
+## Usuario Admin
+- Usuario: admin, contraseña: admin
+- Usuario: root, contraseña: root
+
 ## Tecnologías utilizadas
 
 - **Node.js**: Entorno de ejecución de JavaScript que nos permite ejecutar código JavaScript en el servidor.
